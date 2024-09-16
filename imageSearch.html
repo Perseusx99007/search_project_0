@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="http://images.google.com/images">
-        <input type="text" name="q">
-    </br>
-        <input type="submit" value="Google Search">
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav></nav>
+        <ul>
+            <li><a href="./index.html">Google Search</a></li>
+            <li><a href="./advancedSearch.html">Advanced Search</a></li>
+        </ul>
+        </nav>
+        <img src="./ASSETS/logoLight.svg" alt="Google Logo">
+        <p>images</p>
+        <form action="http://images.google.com/images" method="GET">
+            <div>
+                <input type="text" name="q" placeholder="Search" autofocus>
+                <input type="submit" value="Image Search">
+            </div>
+        </form>
+    </body>
 </html>
