@@ -8,8 +8,44 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
         <title>Document</title>
     </head>
-    <body>
+    <body class="dark-mode">
         <nav>
+            <div class="button-orientation-advanced">
+                <label
+                for="themeToggle"
+                class="themeToggle st-sunMoonThemeToggleBtn"
+                type="checkbox"
+                >
+                <input type="checkbox" id="themeToggle" class="themeToggleInput"/>
+                <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    stroke="none"
+                >
+                    <mask id="moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle cx="11" cy="3" r="8" fill="black"></circle>
+                    </mask>
+                    <circle
+                    class="sunMoon"
+                    cx="10"
+                    cy="10"
+                    r="8"
+                    mask="url(#moon-mask)"
+                    ></circle>
+                    <g>
+                    <circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+                    <circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+                    <circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+                    <circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+                    <circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+                    <circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+                    </g>
+                </svg>
+                </label>
+            </div>
             <ul>
                 <li><a href="./index.html">Google Search</a></li>
                 <li><a href="./imageSearch.html">Image Search</a></li>
@@ -24,20 +60,20 @@
         <form action="https://www.google.com/search" method="get" class="advanced-form">
             <div>
                 <div class="form-section">
-                    <label for="all words">all these words:</label>
-                    <input type="text" name="as_q" id="all words" placeholder="Enter your search term here" required class="form-section-text form-section1"/>
+                    <label for="all words" class="form-section-label">all these words:</label>
+                    <input type="text" name="as_q" id="all words" placeholder="Enter your search term here" autocomplete="off" required class="form-section-text form-section1"/>
                 </div>
                 <div class="form-section">
-                    <label for="exact phrase">this exact phrase:</label>
-                    <input type="text" name="as_epq" id="exact phrase" placeholder="Enter your search term here" class="form-section-text form-section2"/>
+                    <label for="exact phrase" class="form-section-label">this exact phrase:</label>
+                    <input type="text" name="as_epq" id="exact phrase" placeholder="Enter your search term here" autocomplete="off" class="form-section-text form-section2"/>
                 </div>
                 <div class="form-section">
-                    <label for="any words">any of these words:</label>
-                    <input type="text" name="as_oq" id="any words" placeholder="Enter your search term here" class="form-section-text form-section3"/>
+                    <label for="any words" class="form-section-label">any of these words:</label>
+                    <input type="text" name="as_oq" id="any words" placeholder="Enter your search term here" autocomplete="off" class="form-section-text form-section3"/>
                 </div>
                 <div class="form-section">
-                    <label for="none words">none of these words:</label>
-                    <input type="text" name="as_eq" id="none words" placeholder="Enter your search term here" class="form-section-text form-section4"/>
+                    <label for="none words" class="form-section-label">none of these words:</label>
+                    <input type="text" name="as_eq" id="none words" placeholder="Enter your search term here" autocomplete="off" class="form-section-text form-section4"/>
                 </div>
                 </br>
                 <div>
@@ -45,6 +81,7 @@
                 </div>
             </div>
         </form>
+        <script src="./darkMode.JS"></script>
         <script src="./lottie.JS"></script>
     </body>
 </html>
