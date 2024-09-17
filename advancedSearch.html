@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/styles.css" rel="stylesheet" />
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
         <title>Document</title>
     </head>
     <body>
@@ -14,32 +15,36 @@
                 <li><a href="./imageSearch.html">Image Search</a></li>
             </ul>
         </nav>
-        <img src="./ASSETS/logoLight.svg" alt="Google Logo">
-        <p>Advanced Search</p>
-        <p>Find Pages with...</p>
-        <form action="https://www.google.com/search" method="get">
+        <div class="advanced-logo-container">
+            <div id="myLottie" class="advanced-lottie-size"></div>
+        </div>
+        
+        <p class="advanced-text">Advanced Search</p>
+        <p class="find-text">Find Pages with...</p>
+        <form action="https://www.google.com/search" method="get" class="advanced-form">
             <div>
-                <div>
+                <div class="form-section">
                     <label for="all words">all these words:</label>
-                    <input type="text" name="as_q" id="all words" placeholder="Enter your search term here" required/>
+                    <input type="text" name="as_q" id="all words" placeholder="Enter your search term here" required class="form-section-text form-section1"/>
                 </div>
-                <div>
+                <div class="form-section">
                     <label for="exact phrase">this exact phrase:</label>
-                    <input type="text" name="as_epq" id="exact phrase" placeholder="Enter your search term here"/>
+                    <input type="text" name="as_epq" id="exact phrase" placeholder="Enter your search term here" class="form-section-text form-section2"/>
                 </div>
-                <div>
+                <div class="form-section">
                     <label for="any words">any of these words:</label>
-                    <input type="text" name="as_oq" id="any words" placeholder="Enter your search term here"/>
+                    <input type="text" name="as_oq" id="any words" placeholder="Enter your search term here" class="form-section-text form-section3"/>
                 </div>
-                <div>
+                <div class="form-section">
                     <label for="none words">none of these words:</label>
-                    <input type="text" name="as_eq" id="none words" placeholder="Enter your search term here"/>
+                    <input type="text" name="as_eq" id="none words" placeholder="Enter your search term here" class="form-section-text form-section4"/>
                 </div>
                 </br>
                 <div>
-                    <input type="submit" value="Advanced Search"/>
+                    <input type="submit" value="Advanced Search" class="form-button"/>
                 </div>
             </div>
         </form>
+        <script src="./lottie.JS"></script>
     </body>
 </html>

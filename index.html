@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/styles.css" rel="stylesheet" />
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
         <title>Document</title>
     </head>
     <body>
@@ -15,18 +16,17 @@
             </ul>
         </nav>
         <!-- <img src="./ASSETS/google-logo-white.svg" alt="Google Logo"> -->
-         <div class="logo">
-            <lottie-player class="img" src="./ASSETS/LOTTE/lightMode.json"  background="transparent"  speed="1" autoplay></lottie-player>
-         </div>
-        <form action="https://www.google.com/search" method="GET">
-                <input type="text" name="q" placeholder="Search" autofocus>
+         <div class="logo-container">
+            <div id="myLottie" class="lottie-size"></div>
+            <form action="https://www.google.com/search" method="GET" class="form-container">
+                <input type="text" name="q" placeholder="Search" autofocus class="text-input">
                 <br>
-                <div>
-                    <input type="submit" value="Google Search">
-                    <input type="submit" name="btnI" value="I'm Feeling Lucky">
-                </div>
-                
-            
-        </form>
+                <div class="button-container">
+                    <input type="submit" value="Google Search" class="input-button">
+                    <input type="submit" name="btnI" value="I'm Feeling Lucky" class="input-button">
+                </div>        
+            </form>
+         </div> 
+        <script src="./lottie.JS"></script>
     </body>
 </html>

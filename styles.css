@@ -1,19 +1,20 @@
 *
 {
-    margin: 0;
-    padding: 0
+    margin:0px;
+    padding:0px;
+    color: black;
 }
 
 body
 {
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
 }
 
 ul
 {
+    z-index: 1;
+    padding-right: 50px;
     displaY: flex;
     float: right;
     gap: 30px;
@@ -23,16 +24,176 @@ ul
 a
 {
     text-decoration: none;
+    font-family: Calibri;
 }
 
-lottie-player
+.logo-container
 {
-    width: 300px; 
-    height: 300px;
-}
-
-.logo
-{
+    width: 100vw;
+    height: 70vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    gap: 1px;
+}
+
+.lottie-size
+{
+    transform: scale(3);
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+}
+
+.form-container {
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.text-input
+{
+    margin-top: 40px;
+    width: 50rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: 0.5px solid grey;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.button-container
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100vh;
+    height: auto;
+    display: flex;
+    gap: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-button
+{
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: .4rem;
+    padding: 0 0.5rem;
+    font-size: medium;
+    cursor: pointer;
+    border: 0.5px solid grey;
+}
+
+.logo-text
+{
+    font-family: Calibri;
+    font-size: 30px;
+    color: rgb(66, 66, 66);
+    display: flex;
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 28rem;
+    z-index: 10;
+}
+
+.advanced-logo-container
+{
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    position: relative;
+    overflow: hidden;
+    gap: 1px;
+}
+
+.advanced-lottie-size
+{
+    transform: scale(2);
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    z-index: 1;
+}
+
+.advanced-text
+{
+    margin-left: 9rem;
+    font-family: Calibri;
+    font-size: 35px;
+}
+
+.find-text
+{
+    margin-left: 9rem;
+    margin-top: 0.5rem;
+    font-family: Calibri;
+    font-size: 30px;
+}
+
+.advanced-form
+{
+    font-family: Calibri;
+    margin-left: 9rem;
+    margin-top: 2rem;
+    font-size: 25px;
+}
+
+.form-section
+{
+    margin-bottom: 1rem;
+}
+
+.form-section-text
+{
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 18px;
+    margin-left: 1rem;
+    height: 2rem; 
+    border: 1px solid grey;
+}
+
+.form-section1
+{
+    width: 23.4rem;
+}
+
+.form-section2
+{
+    width: 22.3rem;
+}
+
+.form-section3
+{
+    width: 21rem;
+}
+
+.form-section4
+{ 
+    width: 20rem;
+}
+
+.form-button
+{
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: .4rem;
+    padding: 0 0.5rem;
+    font-size: medium;
+    cursor: pointer;
+    border: 0.5px solid grey;
 }
