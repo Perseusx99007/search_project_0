@@ -5,17 +5,24 @@
     color: black;
 }
 
-:root {
+:root 
+{
     --bg-color: white;
     --text-color: black;
     --input-bg-color: white;
     --input-text-color: black;
     --border-color: grey;
-    --svg-color: black;
+    --svg-color: grey;
     --logo-text:rgb(66, 66, 66);
+    --m-color: rgba(0, 0, 0, 0.5);
+    --m-color2: rgb(54, 54, 54);
+    --btn-color: grey;
+    --btn-color2: white;
+    --m-text-color: white;
 }
 
-.dark-mode {
+.dark-mode 
+{
     --bg-color: #3b3b3b;
     --text-color: white;
     --input-bg-color: #333;
@@ -23,19 +30,24 @@
     --border-color: #585858;
     --svg-color: white;
     --logo-text: white;
+    --m-color: rgba(255, 255, 255, 0.5);
+    --m-color2: rgb(194, 194, 194);
+    --btn-color: white;
+    --btn-color2: gray;
+    --m-text-color: black;
 }
 
 body
 {
-    margin-top: 50px;
-    margin-bottom: 50px;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.5s, color 0.5s;
+    /* overflow-x: hidden; */
 }
 
 .button-orientation
 {
+    margin-top: 2rem;
     margin-left: 2rem;
     display: flex;
     justify-content: left;
@@ -45,19 +57,20 @@ body
 
 .button-orientation-advanced
 {
-    margin-left: 2rem;
-    display: flex;
-    justify-content: left;
-    width: 30px;
-    height: 30px;
-    z-index: -10;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: left;
+  width: 30px;
+  height: 30px;
+  z-index: -10;
 }
 
 .themeToggle 
 {
-    color: #bbb;
-    width: 3em;
-  }
+  color: #bbb;
+  width: 3em;
+}
   
   .st-sunMoonThemeToggleBtn 
   {
@@ -168,6 +181,42 @@ a
     color: var(--input-text-color);
     text-decoration: none;
     font-family: Calibri;
+}
+
+@media(max-width: 550px)
+{
+  a
+  {
+    color: var(--m-text-color)
+  }
+
+  .primary-navigation
+  {
+    z-index: 100;
+    position: fixed;
+    inset: 0 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: min(30vh, 10rem) 2rem;
+    background: var(--m-color2);
+    transform: translateX(100%);
+    transition: transform 700ms ease-out
+  }
+
+   @supports (backdrop-filter: blur(.5rem))
+   {
+      .primary-navigation
+      {
+        background: var(--m-color);
+        backdrop-filter: blur(.3rem);
+      }
+   }
+
+  .primary-navigation[data-visible="true"]
+  {
+    transform: translateX(0%);
+  }
 }
 
 .logo-container
@@ -747,5 +796,75 @@ a
     margin-top: 3.7rem;
     margin-left: 9.5rem;
     font-size: .8rem;
+  }
+}
+
+@media (max-width: 550px)
+{
+  .menu-btn
+  {
+      top: 1.7rem;
+      right: 1.7rem;
+      z-index: 1000;
+      padding-top: 0.4rem;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      transition: all .5s ease-in-out;
+      /* border: 3px solid var(--main-white); */
+  }
+
+  .menu-btn-brgr
+  {
+      width: 25px;
+      height: 3px;
+      background: var(--btn-color);
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+  }
+  
+  .menu-btn-brgr::before,
+  .menu-btn-brgr::after
+  {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      background: var(--btn-color);
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+  }
+
+  .menu-btn-brgr::before
+  {
+      transform: translateY(-10px);
+  }
+
+  .menu-btn-brgr::after
+  {
+      transform: translateY(10px);
+  }
+
+  /* Animation of MenuButton */
+  .menu-btn.open .menu-btn-brgr
+  {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none; 
+  }
+
+  .menu-btn.open .menu-btn-brgr::before
+  {
+      transform: rotate(45deg) translate(35px, -35px);
+      background: var(--btn-color2);
+  }
+
+  .menu-btn.open .menu-btn-brgr::after
+  {
+      transform: rotate(-45deg) translate(35px, 35px);
+      background: var(--btn-color2);
   }
 }
