@@ -48,4 +48,9 @@ themeToggle.addEventListener('change', () => {
         sessionStorage.setItem('theme', 'light'); // Save the theme preference to session storage
         console.log('Dark mode disabled (user toggle)');
     }
+
+    // Call function to update Lottie animation
+    if (window.updateLottieAnimation) {
+        window.updateLottieAnimation();
+    }
 });

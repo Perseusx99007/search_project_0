@@ -1,26 +1,45 @@
-const animation = lottie.loadAnimation({
-    container: document.getElementById('myLottie'),                             // the DOM element
-    renderer: 'svg',                                                            // render type (canvas, svg, or html)
-    loop: false,                                                                // whether the animation should loop
-    autoplay: true,                                                             // set to false to disable autoplay
-    path: './ASSETS/LOTTIE/lightMode.json'                                      // your Lottie file path
-  });
+let animation;
+let animationCompleted = false;
 
-  // Flag to track animation completion
+// Function to load Lottie animation based on the current theme
+function loadLottieAnimation() {
+    const theme = sessionStorage.getItem('theme');
 
-  let animationCompleted = false;
+    const lottieFilePath = theme === 'dark'
+        ? './ASSETS/LOTTIE/darkMode.json'
+        : './ASSETS/LOTTIE/lightMode.json';
 
-  // Add click event to play animation
-
-  document.getElementById('myLottie').addEventListener('click', function() {
-    if (animationCompleted) {
-      animation.goToAndPlay(0, true);                                           // Play from the beginning
-      animationCompleted = false;                                               // Reset the flag for the next time
+    if (animation) {
+        animation.destroy();
     }
-  });
 
-  // Handle animation completion
+    animation = lottie.loadAnimation({
+        container: document.getElementById('myLottie'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: lottieFilePath
+    });
 
-  animation.addEventListener('complete', function() {
-    animationCompleted = true;                                                 // Set flag to allow click interaction
-  });
+    animationCompleted = false;
+
+    animation.addEventListener('complete', function() {
+        animationCompleted = true;
+    });
+}
+
+// Expose a global function to be called from darkMode.js
+window.updateLottieAnimation = function() {
+    loadLottieAnimation();
+};
+
+// Initialize the Lottie animation on page load based on the current theme
+loadLottieAnimation();
+
+// Play the animation when clicked
+document.getElementById('myLottie').addEventListener('click', function() {
+    if (animationCompleted) {
+        animation.goToAndPlay(0, true);
+        animationCompleted = false;
+    }
+});
