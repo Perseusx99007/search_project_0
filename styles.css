@@ -19,6 +19,9 @@
     --btn-color: grey;
     --btn-color2: white;
     --m-text-color: white;
+    --border-color2:black;
+    --btn-border-color: black;
+    --line-color: grey;
 }
 
 .dark-mode 
@@ -35,6 +38,10 @@
     --btn-color: white;
     --btn-color2: gray;
     --m-text-color: black;
+    --input-box-color: rgb(73, 73, 73);
+    --border-color2: grey;
+    --btn-border-color: white;
+    --line-color: white;
 }
 
 body
@@ -183,6 +190,26 @@ a
     font-family: Calibri;
 }
 
+@media(min-width: 551px)
+{
+  .primary-navigation a:after 
+  {
+    content: '';
+    display:  block;
+    margin: auto;
+    margin-top: .2rem;
+    height: 0.1rem;
+    width: 0rem;
+    background-color: var(--line-color);
+    transition: width .3s ease-in-out;
+  }
+
+  .primary-navigation a:hover:after 
+  {
+    width: 100%;
+  }
+}
+
 @media(max-width: 550px)
 {
   a
@@ -266,6 +293,20 @@ a
     outline: none;
 }
 
+.text-input:focus
+{
+  background-color: var(--input-box-color);
+  border-color: solid var(--border-color2);
+  transition: all 400ms ease-out;
+}
+
+.text-input:hover
+{
+  background-color: var(--input-box-color);
+  border-color: var(--border-color2);
+  transition: all 400ms ease-out;
+}
+
 .button-container
 {
     margin-top: 10px;
@@ -290,6 +331,13 @@ a
     background-color: var(--input-bg-color);
     color: var(--input-text-color);
     border: 1px solid var(--border-color);
+}
+
+.input-button:hover
+{
+  background-color: var(--input-box-color);
+  border-color: var(--border-color2);
+  transition: all 400ms ease-out;
 }
 
 .logo-text
@@ -374,6 +422,20 @@ a
     outline: none;
 }
 
+.form-section-text:focus
+{
+  background-color: var(--input-box-color);
+  border-color: solid var(--border-color2);
+  transition: all 400ms ease-out;
+}
+
+.form-section-text:hover
+{
+  background-color: var(--input-box-color);
+  border-color: solid var(--border-color2);
+  transition: all 400ms ease-out;
+}
+
 .form-section1
 {
     width: 23.4rem;
@@ -402,9 +464,16 @@ a
     padding: 0 0.5rem;
     font-size: medium;
     cursor: pointer;
-    background-color: var(--input-bg-color);
-    color: var(--input-text-color);
+    background-color: rgb(30, 146, 253);
+    color: white;
     border: 1px solid var(--border-color);
+}
+
+.form-button:hover
+{
+  background-color: rgb(0, 124, 240);
+  border-color: var(--btn-border-color);
+  transition: all 400ms ease-out;
 }
 
 @media (max-width: 500px)
