@@ -1,10 +1,13 @@
 # search_projrct-_0
+
  A front-end for Google Search, Google Image Search, and Google Advanced Search.
 
- ## Description
+## Description
+
  This project is a front-end for Google Search, Google Image Search, and Google Advanced Search. It allows users to perform searches on Google using a user-friendly interface. The project is built using HTML, CSS, and JavaScript.
 
- ## Features
+## Features
+
  1. Google Search: Users can perform basic searches on Google using the search bar.
 
  2. Google Image Search: Users can search for images on Google using the search bar and view the results in a grid layout.
