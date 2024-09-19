@@ -14,7 +14,7 @@
     --border-color: grey;
     --svg-color: grey;
     --logo-text:rgb(66, 66, 66);
-    --m-color: rgba(0, 0, 0, 0.5);
+    --m-color: rgba(102, 102, 102, 0.5);
     --m-color2: rgb(54, 54, 54);
     --btn-color: grey;
     --btn-color2: white;
@@ -209,7 +209,7 @@ a
       .primary-navigation
       {
         background: var(--m-color);
-        backdrop-filter: blur(.3rem);
+        backdrop-filter: blur(.5rem);
       }
    }
 
