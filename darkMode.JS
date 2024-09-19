@@ -23,10 +23,12 @@ function applyTheme() {
             document.body.classList.add('dark-mode');
             themeToggle.checked = true; // Sync the checkbox with the system preference
             console.log('Dark mode enabled (system preference)');
+            sessionStorage.setItem('theme', 'dark'); // Save the system preference
         } else {
             document.body.classList.remove('dark-mode');
             themeToggle.checked = false; // Sync the checkbox with the system preference
             console.log('Dark mode disabled (system preference)');
+            sessionStorage.setItem('theme', 'light'); // Save the system preference
         }
     }
 }
