@@ -1,6 +1,6 @@
 # search_projrct-_0
 
- A front-end for Google Search, Google Image Search, and Google Advanced Search.
+ A Front-end for Google Search, Google Image Search, and Google Advanced Search, with a personal touch.
 
 ## Description
 
